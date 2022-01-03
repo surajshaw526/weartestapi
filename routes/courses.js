@@ -4,8 +4,8 @@ const router = express.Router();
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb+srv://surajshaw526:123456@cluster0.jk9go.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-  .then(() => console.log("Connect to mongoDB..."))
+  .connect("mongodb+srv://surajshaw526:suraj123@cluster0.jk9go.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+  .then(() => console.log("Connected to mongoDB..."))
   .catch((error) => console.error("Could not Connect to mongoDB..."));
 
 const genreSchema = new mongoose.Schema({
