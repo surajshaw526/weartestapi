@@ -32,6 +32,8 @@ app.use(express.urlencoded({ extended: true }))///key=value&key=value//so popula
 app.use(express.static('public'));
 ////another course module use
 app.use('/api/courses',courses)
+app.use('/api/suraj',courses)
+
 app.use(function(req, res, next){
     console.log('Logging....');
     next();
@@ -57,8 +59,8 @@ app.get('/',(req,res)=>{
 
 
 app.get('/api/posts/:year/:month',(req,res)=>{
-    res.send(req.query);
-    // res.status(404).send('Sorry');
+    // res.send(req.query);
+    res.status(404).send('Sorry');
 })
 
 
