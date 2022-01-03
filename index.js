@@ -3,7 +3,7 @@ const express=require('express');
 const courses=require('./routes/courses');
 const app=express();
 const morgan=require('morgan');
-const config=require('config');
+// const config=require('config');
 const startupDebugger=require('debug')('app:startup');
 const dbDebugger=require('debug')('app:db');
 
@@ -16,15 +16,15 @@ dbDebugger('connection to database')
 
 
 //Configuration
-console.log('Application Name: '+config.get('name'));
-console.log('Mail Server: '+config.get('mail.host'));
-console.log('Mail Password: '+config.get('mail.password'));
+// console.log('Application Name: '+config.get('name'));
+// console.log('Mail Server: '+config.get('mail.host'));
+// console.log('Mail Password: '+config.get('mail.password'));
 
 
 
 // console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
-startupDebugger(`NODE_ENV: ${process.env.NODE_ENV}`);
-console.log(`app: ${app.get('env')}`);
+// startupDebugger(`NODE_ENV: ${process.env.NODE_ENV}`);
+// console.log(`app: ${app.get('env')}`);
 
 
 app.use(express.json())///req.body if request is json
@@ -41,10 +41,10 @@ app.use(function(req,res,next){
     next();
 })
 
-if(app.get('env')==='development'){
-    app.use(morgan('tiny'));
-    console.log('morgan enabe...');
-}
+// if(app.get('env')==='development'){
+//     app.use(morgan('tiny'));
+//     console.log('morgan enabe...');
+// }
 
 
 // app.get('/',(req,res)=>{
