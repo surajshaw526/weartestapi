@@ -4,7 +4,7 @@ const router = express.Router();
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb://localhost/vidly")
+  .connect("mongodb+srv://surajshaw526:123456@cluster0.jk9go.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
   .then(() => console.log("Connect to mongoDB..."))
   .catch((error) => console.error("Could not Connect to mongoDB..."));
 
